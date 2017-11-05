@@ -1,3 +1,3 @@
 puts ">> Type anything you want:"
-reponse = get.chomp
+reponse = gets.chomp
 puts reponse
