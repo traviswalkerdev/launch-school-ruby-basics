@@ -1,13 +1,11 @@
+answer = nil
+
 loop do
   puts ">> Do you want me to print something? (y/n)"
-  answer = gets.chomp
+  answer = gets.chomp.downcase
 
-  break if answer.downcase == "n"
-
-  if answer.downcase == "y"
-    puts "something"
-    break
-  else
-    puts "Invalid input! Please enter y or n."
-  end
+  break if %w(y n).include?(answer)
+  puts ">> Invalid input! Please enter y or n"
 end
+
+puts 'something' if answer == "y"
